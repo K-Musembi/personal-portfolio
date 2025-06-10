@@ -6,14 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [
     react(),
-    tailwindcss({
-      config: {
-        content: ['./src/**/*.{js,jsx,ts,tsx}'],
-        theme: {
-          extend: {},
-        },
-        plugins: [require('daisyui')],
-      },
-    }),
+    tailwindcss(),
   ],
 })
