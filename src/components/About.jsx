@@ -51,7 +51,7 @@ const About = () => {
         {/* Right Side */}
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <img
-            src="/profile-image.jpg"
+            src="/se-bg.png"
             alt="Profile"
             className="rounded-lg shadow-lg max-w-sm w-full h-auto object-cover"
           />

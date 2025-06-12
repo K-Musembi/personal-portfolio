@@ -10,7 +10,7 @@ const Skills = () => {
         <div className="card bg-base-100 shadow-xl max-w-md mx-auto">
           <figure className="px-10 pt-10">
             <img
-              src="https://via.placeholder.com/400x225?text=Software+Dev"
+              src="/backend.png"
               alt="Software Development"
               className="rounded-xl h-48 object-cover"
             />
@@ -26,7 +26,7 @@ const Skills = () => {
         <div className="card bg-base-100 shadow-xl max-w-md mx-auto">
           <figure className="px-10 pt-10">
             <img
-              src="https://via.placeholder.com/400x225?text=Web+Design"
+              src="/devops.png"
               alt="Web Design"
               className="rounded-xl h-48 object-cover"
             />

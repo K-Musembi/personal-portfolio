@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 const SoftwareProjects = () => {
   const projects = [
@@ -36,12 +36,26 @@ const SoftwareProjects = () => {
     },
   ];
 
+  const carouselRef = useRef(null);
+
+  const navigateToSlide = (slideId) => {
+    if (carouselRef.current) {
+      const targetSlide = document.getElementById(slideId);
+      if (targetSlide) {
+        carouselRef.current.scrollTo({
+          left: targetSlide.offsetLeft,
+          behavior: 'smooth',
+        });
+      }
+    }
+  };
+
   return (
     <div className="container mx-auto px-4 py-16"> {/* Consistent padding with Skills.jsx */}
       <h1 className="text-4xl font-bold text-center text-primary mb-12">
         Software Projects
       </h1>
-      <div className="carousel w-full rounded-box shadow-lg"> {/* Added rounded-box and shadow for better appearance */}
+      <div ref={carouselRef} className="carousel w-full rounded-box shadow-lg"> {/* Added rounded-box and shadow for better appearance */}
         {projects.map((project) => (
           <div
             key={project.id}
@@ -57,23 +71,31 @@ const SoftwareProjects = () => {
                 />
               </div>
               <div className="w-full md:w-1/2 h-1/2 md:h-full p-6 md:p-10 flex flex-col justify-center bg-base-100">
-                <h3 className="text-2xl lg:text-3xl font-bold mb-3 md:mb-4 text-neutral-content-focus">
+                <h3 className="text-2xl lg:text-3xl font-bold mb-3 md:mb-4 text-neutral-content-focus self-center">
                   {project.title}
                 </h3>
                 <p className="text-base-content/80 text-sm md:text-base leading-relaxed">
                   {project.description}
                 </p>
-                <a href="#" className="btn btn-primary btn-sm mt-4 self-start">View Project</a>
+                <a href="#" className="btn btn-primary mt-6 self-center">View Project</a>
               </div>
             </div>
             {/* Navigation Buttons */}
             <div className="absolute left-3 right-3 md:left-5 md:right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-              <a href={project.prev} className="btn btn-circle btn-ghost text-base-content/70 hover:bg-base-content/10">
+              <button
+                onClick={() => navigateToSlide(project.prev.substring(1))}
+                className="btn btn-circle btn-primary text-neutral-content hover:bg-neutral-focus"
+                aria-label={`Go to previous project slide`}
+              >
                 ❮
-              </a>
-              <a href={project.next} className="btn btn-circle btn-ghost text-base-content/70 hover:bg-base-content/10">
+              </button>
+              <button
+                onClick={() => navigateToSlide(project.next.substring(1))}
+                className="btn btn-circle btn-primary text-neutral-content hover:bg-neutral-focus"
+                aria-label={`Go to next project slide`}
+              >
                 ❯
-              </a>
+              </button>
             </div>
           </div>
         ))}
