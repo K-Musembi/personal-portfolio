@@ -2,39 +2,45 @@ import React from 'react';
 
 const Skills = () => {
   return (
-    <div className="container bg-primary mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-center text-base-100 mb-12">
+    <div className="container bg-primary mx-auto px-4 py-12">
+      <h1 className="text-4xl font-bold text-center text-base-100 mb-10">
         Services Offered
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="card bg-base-100 shadow-xl max-w-md mx-auto">
-          <figure className="px-10 pt-10">
+          <figure className="px-8 pt-8">
             <img
-              src="/backend.png"
+              src="/coding1.jpg"
               alt="Software Development"
-              className="rounded-xl h-48 object-cover"
+              className="rounded-xl h-40 object-cover"
             />
           </figure>
-          <div className="card-body items-center text-center">
+          <div className="card-body items-center text-center p-6">
             <h2 className="card-title text-2xl">Backend Development</h2>
-            <p className="text-[1.0625rem] text-base-content/70">
-              Designing and developing backend solutions and web applications using modern technologies and frameworks - Java Spring Boot, Python Django, React, SQL and NoSQL databases, Docker, Git. Other services include AI agent development.
+            <p className="text-base text-base-content/70">
+              Designing and developing backend solutions and web applications using
+              modern technologies and frameworks - Java Spring Boot, Python Django,
+              React, SQL and NoSQL databases, Docker, Git. Other services include
+              AI agent development.
             </p>
           </div>
         </div>
 
         <div className="card bg-base-100 shadow-xl max-w-md mx-auto">
-          <figure className="px-10 pt-10">
+          <figure className="px-8 pt-8">
             <img
-              src="/devops.png"
+              src="/devops1.jpg"
               alt="Web Design"
-              className="rounded-xl h-48 object-cover"
+              className="rounded-xl h-40 object-cover"
             />
           </figure>
-          <div className="card-body items-center text-center">
+          <div className="card-body items-center text-center p-6">
             <h2 className="card-title text-2xl">DevOps Engineering</h2>
-            <p className="text-[1.0625rem] text-base-content/70">
-              Designing and implementing CI/CD pipelines, automating deployments, and managing cloud infrastructure using AWS services like EC2, S3, Lambda, and RDS, as well as containerization using Docker and monitoring tools like Prometheus.
+            <p className="text-base text-base-content/70">
+              Designing and implementing CI/CD pipelines, automating deployments,
+              and managing cloud infrastructure using AWS services like EC2, S3,
+              Lambda, and RDS, as well as containerization using Docker and
+              monitoring tools like Prometheus.
             </p>
           </div>
         </div>

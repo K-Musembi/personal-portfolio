@@ -3,17 +3,17 @@ import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedinIn } from 'react-icons/f
 
 const Contacts = () => {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-center text-primary mb-12">
+    <div className="container mx-auto px-4 py-12">
+      <h1 className="text-4xl font-bold text-center text-primary mb-10">
         Contact Me
       </h1>
       <div className="flex flex-col md:flex-row gap-8 items-start">
 
         <div className="card md:w-1/2 bg-primary text-primary-content shadow-xl">
-          <div className="card-body">
-            <h2 className="card-title text-2xl mb-6">Get in Touch</h2>
+          <div className="card-body p-6">
+            <h2 className="card-title text-2xl mb-4">Get in Touch</h2>
             
-            <div className="flex items-center space-x-4 mb-4">
+            <div className="flex items-center space-x-4 mb-3">
               <FaEnvelope size={24} />
               <div>
                 <p className="font-semibold text-lg">Email</p>
@@ -23,7 +23,7 @@ const Contacts = () => {
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 mb-4">
+            <div className="flex items-center space-x-4 mb-3">
               <FaLinkedinIn size={24} />
               <div>
                 <p className="font-semibold text-lg">LinkedIn</p>
@@ -33,7 +33,7 @@ const Contacts = () => {
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 mb-4">
+            <div className="flex items-center space-x-4 mb-3">
               <FaPhone size={24} />
               <div>
                 <p className="font-semibold text-lg">Phone</p>
@@ -54,11 +54,11 @@ const Contacts = () => {
         </div>
 
         <div className="card md:w-1/2 bg-primary text-primary-content shadow-xl">
-          <div className="card-body">
-            <h2 className="card-title text-2xl mb-6">Send a Message</h2>
+          <div className="card-body p-6">
+            <h2 className="card-title text-2xl mb-4">Send a Message</h2>
             <form onSubmit={(e) => e.preventDefault()}> {/* Basic form handling */}
-              <div className="form-control mb-4">
-                <label className="label">
+              <div className="form-control mb-3">
+                <label className="label py-1">
                   <span className="label-text text-primary-content text-base">Full Name</span>
                 </label>
                 <input 
@@ -68,8 +68,8 @@ const Contacts = () => {
                 />
               </div>
 
-              <div className="form-control mb-4">
-                <label className="label">
+              <div className="form-control mb-3">
+                <label className="label py-1">
                   <span className="label-text text-primary-content text-base">Email</span>
                 </label>
                 <input 
@@ -79,17 +79,17 @@ const Contacts = () => {
                 />
               </div>
 
-              <div className="form-control mb-4">
-                <label className="label">
+              <div className="form-control mb-3">
+                <label className="label py-1">
                   <span className="label-text text-primary-content text-base">Message</span>
                 </label>
                 <textarea 
-                  className="textarea textarea-bordered h-32 w-full bg-base-100 text-base-content placeholder-base-content/50" 
+                  className="textarea textarea-bordered h-28 w-full bg-base-100 text-base-content placeholder-base-content/50" 
                   placeholder="Your message..."
                 ></textarea>
               </div>
 
-              <div className="form-control mt-6">
+              <div className="form-control mt-4">
                 <button type="submit" className="btn btn-accent">
                   Send Message
                 </button>

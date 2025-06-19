@@ -11,7 +11,7 @@ const About = () => {
         {/* Left Side */}
         <div className="md:w-1/2 space-y-6">
           <p className="text-lg leading-relaxed">
-            Hi! I'm a tech enthusiast with more than three years of
+            I'm a tech enthusiast with more than three years of
             experience in software development. I am passionate about building digital solutions that serve a useful purpose by addressing actual needs. I motivate myself to learn and grow by staying up to date with the latest trends.
           </p>
           <p className="text-lg leading-relaxed">
@@ -26,7 +26,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 className="link link-primary"
               >
-                <FaGithub size={32} />
+                <FaGithub size={24} />
               </a>
               <a
                 href="https://linkedin.com/in/kevin-musembi/"
@@ -34,7 +34,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 className="link link-primary"
               >
-                <FaLinkedin size={32} />
+                <FaLinkedin size={24} />
               </a>
               <a
                 href="https://discord.com/channels/kevin_musembi"
@@ -42,7 +42,7 @@ const About = () => {
                 rel="noopener noreferrer"
                 className="link link-primary"
               >
-                <FaDiscord size={32} />
+                <FaDiscord size={24} />
               </a>
             </div>
           </div>
