@@ -1,7 +1,26 @@
 import React from 'react';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedinIn } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 const Contacts = () => {
+  const SERVICE_ID = 'service_25';
+  const TEMPLATE_ID = 'template_25';
+  const PUBLIC_KEY = 'VyDK8FJFROv7exf-k';
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY)
+      .then((result) => {
+        console.log('Email successfully sent!', result.text);
+        alert('Your message has been sent successfully!');
+        e.target.reset(); // Clear form fields after successful submission
+      }, (error) => {
+        console.error('Failed to send email:', error.text);
+        alert('Failed to send your message. Please try again later.');
+      });
+  };
+
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-center text-primary mb-10">
@@ -56,7 +75,7 @@ const Contacts = () => {
         <div className="card md:w-1/2 bg-primary text-primary-content shadow-xl">
           <div className="card-body p-6">
             <h2 className="card-title text-2xl mb-4">Send a Message</h2>
-            <form onSubmit={(e) => e.preventDefault()}> {/* Basic form handling */}
+            <form onSubmit={handleSubmit}>
               <div className="form-control mb-3">
                 <label className="label py-1">
                   <span className="label-text text-primary-content text-base">Full Name</span>
@@ -65,6 +84,7 @@ const Contacts = () => {
                   type="text" 
                   placeholder="Your Full Name" 
                   className="input input-bordered w-full bg-base-100 text-base-content placeholder-base-content/50" 
+                  name="from_name" // Added for EmailJS
                 />
               </div>
 
@@ -76,6 +96,7 @@ const Contacts = () => {
                   type="email" 
                   placeholder="your.email@example.com" 
                   className="input input-bordered w-full bg-base-100 text-base-content placeholder-base-content/50" 
+                  name="from_email" // Added for EmailJS
                 />
               </div>
 
@@ -86,6 +107,7 @@ const Contacts = () => {
                 <textarea 
                   className="textarea textarea-bordered h-28 w-full bg-base-100 text-base-content placeholder-base-content/50" 
                   placeholder="Your message..."
+                  name="message" // Added for EmailJS
                 ></textarea>
               </div>
 

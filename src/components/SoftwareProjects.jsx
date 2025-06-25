@@ -7,6 +7,7 @@ const SoftwareProjects = () => {
       imgSrc: '/directory-project-bg.png',
       title: 'Employee Directory',
       description: 'A comprehensive contacts directory application built with Java Spring Boot, React, and MySQL. It features a user-friendly interface with graphical charts to display the main statisctics in the directory data.',
+      url: 'https://github.com/K-Musembi/contact_registry',
       prev: '#slide3',
       next: '#slide2',
     },
@@ -15,6 +16,7 @@ const SoftwareProjects = () => {
       imgSrc: '/sokoplace-project.png',
       title: 'SokoPlace E-Commerce',
       description: 'An e-commerce platform for electronic gadgets developed using Java Spring Boot, React and PostgreSQL. It includes features like product listings to enable users browse through different categories, and a cart component to manage purchases.',
+      url: 'https://github.com/K-Musembi/SokoPlace-Backend',
       prev: '#slide1',
       next: '#slide3',
     },
@@ -23,6 +25,7 @@ const SoftwareProjects = () => {
       imgSrc: '/embe-zuri.jpeg',
       title: 'AI Crop Disease Detection',
       description: 'An AI-powered crop disease detection system that uses a Deep Learning model to diagnose crop diseases. Built using Python (Flask), TensorFlow, and MySQL, it provides a web interface for users to upload images and receive disease predictions.',
+      url: 'https://github.com/K-Musembi/embe-zuri',
       prev: '#slide2',
       next: '#slide1',
     },
@@ -70,7 +73,7 @@ const SoftwareProjects = () => {
                 <p className="text-base-content/80 text-sm md:text-base leading-relaxed">
                   {project.description}
                 </p>
-                <a href="#" className="btn btn-primary mt-6 self-center">View Project</a>
+                <a href={project.url} className="btn btn-primary mt-6 self-center">View Project</a>
               </div>
             </div>
             {/* Navigation Buttons */}
