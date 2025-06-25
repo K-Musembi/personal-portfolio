@@ -73,7 +73,7 @@ const SoftwareProjects = () => {
                 <p className="text-base-content/80 text-sm md:text-base leading-relaxed">
                   {project.description}
                 </p>
-                <a href={project.url} className="btn btn-primary mt-6 self-center">View Project</a>
+                <a href={project.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-6 self-center">View Project</a>
               </div>
             </div>
             {/* Navigation Buttons */}
