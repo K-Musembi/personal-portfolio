@@ -63,7 +63,7 @@ const SoftwareProjects = () => {
                 <img
                   src={project.imgSrc}
                   alt={project.title}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="w-full md:w-1/2 h-1/2 md:h-full p-6 md:p-10 flex flex-col justify-center bg-base-100">
