@@ -11,11 +11,11 @@ const About = () => {
         {/* Left Side */}
         <div className="md:w-1/2 space-y-6">
           <p className="text-lg leading-relaxed">
-            I'm a tech enthusiast with more than three years of
+            I'm a tech enthusiast with more than 3 years of
             experience in software development. I am passionate about building digital solutions that serve a useful purpose by addressing actual needs. I motivate myself to learn and grow by staying up to date with the latest trends.
           </p>
           <p className="text-lg leading-relaxed">
-            My main interests include Backend Development, Cloud Computing and Artificial Intelligence. Outside of tech, I engage in various activities that add meaning to my life such as reading, catching up with friends, and exploring the outdoors. I also love swimming and travel.
+            My main interests include Backend Development, Cloud Computing and Artificial Intelligence. I'm always eager to contribute to projects that drive innovation and make a positive impact. Other interests include reading and exploring.
           </p>
           <div className="mt-8">
             <h2 className="text-2xl font-semibold mb-4">Let's connect</h2>

@@ -19,7 +19,7 @@ const Skills = () => {
             <h2 className="card-title text-2xl">Backend Development</h2>
             <p className="text-base text-base-content/70">
               Designing and developing backend solutions and web applications using
-              modern technologies and frameworks - Java Spring Boot, Python Django,
+              modern frameworks - Java Spring Boot, Python FastAPI / Django,
               React, SQL and NoSQL databases, Docker, Git. Other services include
               AI agent development.
             </p>
@@ -37,10 +37,9 @@ const Skills = () => {
           <div className="card-body items-center text-center p-6">
             <h2 className="card-title text-2xl">DevOps Engineering</h2>
             <p className="text-base text-base-content/70">
-              Designing and implementing CI/CD pipelines, automating deployments,
+              DevOps Engineering - designing and implementing CI/CD pipelines, automating deployments,
               and managing cloud infrastructure using AWS services like EC2, S3,
-              Lambda, and RDS, as well as containerization using Docker and
-              monitoring tools like Prometheus.
+              Lambda, and RDS, as well as containerization using Docker.
             </p>
           </div>
         </div>
