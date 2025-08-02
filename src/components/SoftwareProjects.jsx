@@ -47,8 +47,8 @@ const SoftwareProjects = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-16"> {/* Consistent padding with Skills.jsx */}
-      <h1 className="text-4xl font-bold text-center text-primary mb-12">
+    <div className="container mx-auto px-4 py-8 md:py-16"> {/* Responsive padding */}
+      <h1 className="text-2xl md:text-4xl font-bold text-center text-primary mb-8 md:mb-12">
         Latest Projects
       </h1>
       <div ref={carouselRef} className="carousel w-full rounded-box shadow-lg"> {/* Added rounded-box and shadow for better appearance */}
@@ -56,38 +56,38 @@ const SoftwareProjects = () => {
           <div
             key={project.id}
             id={project.id}
-            className="carousel-item relative w-full h-[480px] md:h-[400px] lg:h-[480px]" // Responsive height
+            className="carousel-item relative w-full h-[600px] sm:h-[550px] md:h-[400px] lg:h-[480px]" // Improved responsive height
           >
             <div className="flex flex-col md:flex-row w-full h-full">
-              <div className="w-full md:w-1/2 h-1/2 md:h-full bg-base-100">
+              <div className="w-full md:w-1/2 h-2/5 md:h-full bg-base-100">
                 <img
                   src={project.imgSrc}
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="w-full md:w-1/2 h-1/2 md:h-full p-6 md:p-10 flex flex-col justify-center bg-base-100">
-                <h3 className="text-2xl lg:text-3xl font-bold mb-3 md:mb-4 text-neutral-content-focus self-center">
+              <div className="w-full md:w-1/2 h-3/5 md:h-full p-4 md:p-6 lg:p-10 flex flex-col justify-center bg-base-100">
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-2 md:mb-3 lg:mb-4 text-neutral-content-focus text-center">
                   {project.title}
                 </h3>
-                <p className="text-base-content/80 text-sm md:text-base leading-relaxed">
+                <p className="text-base-content/80 text-xs sm:text-sm md:text-base leading-relaxed mb-4">
                   {project.description}
                 </p>
-                <a href={project.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-6 self-center">View Project</a>
+                <a href={project.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm md:btn-md mt-2 md:mt-6 self-center">View Project</a>
               </div>
             </div>
             {/* Navigation Buttons */}
-            <div className="absolute left-3 right-3 md:left-5 md:right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+            <div className="absolute left-2 right-2 md:left-3 md:right-3 lg:left-5 lg:right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
               <button
                 onClick={() => navigateToSlide(project.prev.substring(1))}
-                className="btn btn-circle btn-primary text-neutral-content hover:bg-neutral-focus"
+                className="btn btn-circle btn-sm md:btn-md btn-primary text-neutral-content hover:bg-neutral-focus"
                 aria-label={`Go to previous project slide`}
               >
                 ❮
               </button>
               <button
                 onClick={() => navigateToSlide(project.next.substring(1))}
-                className="btn btn-circle btn-primary text-neutral-content hover:bg-neutral-focus"
+                className="btn btn-circle btn-sm md:btn-md btn-primary text-neutral-content hover:bg-neutral-focus"
                 aria-label={`Go to next project slide`}
               >
                 ❯

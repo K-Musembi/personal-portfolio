@@ -7,12 +7,12 @@ const About = () => {
       <h1 className="text-4xl font-bold text-center text-primary mb-12">
         About Me
       </h1>
-      <div className="flex flex-col md:flex-row gap-8 items-start">
+      <div className="flex flex-col-reverse md:flex-row gap-8 items-start">
         {/* Left Side */}
         <div className="md:w-1/2 space-y-6">
           <p className="text-lg leading-relaxed">
-            I'm a tech enthusiast with more than 3 years of
-            experience in software development. I am passionate about building digital solutions that serve a useful purpose by addressing actual needs. I motivate myself to learn and grow by staying up to date with the latest trends.
+            I'm a tech enthusiast with more than 2 years of
+            experience as a software developer. I am passionate about building digital solutions that serve a useful purpose by addressing actual needs. I motivate myself to learn and grow by staying up to date with the latest trends.
           </p>
           <p className="text-lg leading-relaxed">
             My main interests include Backend Development, Cloud Computing and Artificial Intelligence. I'm always eager to contribute to projects that drive innovation and make a positive impact. Other interests include reading and exploring.

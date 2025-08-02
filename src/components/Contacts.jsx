@@ -22,97 +22,100 @@ const Contacts = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-center text-primary mb-10">
+    <div className="container mx-auto px-4 py-8 md:py-12">
+      <h1 className="text-2xl md:text-4xl font-bold text-center text-primary mb-6 md:mb-10">
         Contact Me
       </h1>
-      <div className="flex flex-col md:flex-row gap-8 items-start">
+      <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
 
-        <div className="card md:w-1/2 bg-primary text-primary-content shadow-xl">
-          <div className="card-body p-6">
-            <h2 className="card-title text-2xl mb-4">Get in Touch</h2>
+        <div className="card w-full md:w-1/2 bg-primary text-primary-content shadow-xl">
+          <div className="card-body p-4 md:p-6">
+            <h2 className="card-title text-xl md:text-2xl mb-3 md:mb-4">Get in Touch</h2>
             
-            <div className="flex items-center space-x-4 mb-3">
-              <FaEnvelope size={24} />
-              <div>
-                <p className="font-semibold text-lg">Email</p>
-                <a href="mailto:your.email@example.com" className="link link-hover text-primary-content/80 text-base">
+            <div className="flex items-start space-x-3 md:space-x-4 mb-3">
+              <FaEnvelope size={20} className="mt-1 flex-shrink-0" />
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold text-base md:text-lg">Email</p>
+                <a href="mailto:kevinmusembi.m@gmail.com" className="link link-hover text-primary-content/80 text-sm md:text-base break-all">
                   kevinmusembi.m@gmail.com
                 </a>
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 mb-3">
-              <FaLinkedinIn size={24} />
-              <div>
-                <p className="font-semibold text-lg">LinkedIn</p>
-                <a href="https://linkedin.com/in/kevin-musembi/" className="link link-hover text-primary-content/80 text-base">
-                  https://linkedin.com/in/kevin-musembi/
+            <div className="flex items-start space-x-3 md:space-x-4 mb-3">
+              <FaLinkedinIn size={20} className="mt-1 flex-shrink-0" />
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold text-base md:text-lg">LinkedIn</p>
+                <a href="https://linkedin.com/in/kevin-musembi/" className="link link-hover text-primary-content/80 text-sm md:text-base break-all">
+                  linkedin.com/in/kevin-musembi/
                 </a>
               </div>
             </div>
 
-            <div className="flex items-center space-x-4 mb-3">
-              <FaPhone size={24} />
-              <div>
-                <p className="font-semibold text-lg">Phone</p>
-                <a href="tel:+1234567890" className="link link-hover text-primary-content/80 text-base">
+            <div className="flex items-start space-x-3 md:space-x-4 mb-3">
+              <FaPhone size={20} className="mt-1 flex-shrink-0" />
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold text-base md:text-lg">Phone</p>
+                <a href="tel:+254723929410" className="link link-hover text-primary-content/80 text-sm md:text-base">
                   +254-723-929-410
                 </a>
               </div>
             </div>
 
-            <div className="flex items-center space-x-4">
-              <FaMapMarkerAlt size={24} />
-              <div>
-                <p className="font-semibold text-lg">Address</p>
-                <p className="text-primary-content/80 text-base">Nairobi, Kenya</p>
+            <div className="flex items-start space-x-3 md:space-x-4">
+              <FaMapMarkerAlt size={20} className="mt-1 flex-shrink-0" />
+              <div className="min-w-0 flex-1">
+                <p className="font-semibold text-base md:text-lg">Address</p>
+                <p className="text-primary-content/80 text-sm md:text-base">Nairobi, Kenya</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="card md:w-1/2 bg-primary text-primary-content shadow-xl">
-          <div className="card-body p-6">
-            <h2 className="card-title text-2xl mb-4">Send a Message</h2>
+        <div className="card w-full md:w-1/2 bg-primary text-primary-content shadow-xl">
+          <div className="card-body p-4 md:p-6">
+            <h2 className="card-title text-xl md:text-2xl mb-3 md:mb-4">Send a Message</h2>
             <form onSubmit={handleSubmit}>
               <div className="form-control mb-3">
                 <label className="label py-1">
-                  <span className="label-text text-primary-content text-base">Full Name</span>
+                  <span className="label-text text-primary-content text-sm md:text-base">Full Name</span>
                 </label>
                 <input 
                   type="text" 
                   placeholder="Your Full Name" 
-                  className="input input-bordered w-full bg-base-100 text-base-content placeholder-base-content/50" 
-                  name="from_name" // Added for EmailJS
+                  className="input input-bordered input-sm md:input-md w-full bg-base-100 text-base-content placeholder-base-content/50" 
+                  name="from_name"
+                  required
                 />
               </div>
 
               <div className="form-control mb-3">
                 <label className="label py-1">
-                  <span className="label-text text-primary-content text-base">Email</span>
+                  <span className="label-text text-primary-content text-sm md:text-base">Email</span>
                 </label>
                 <input 
                   type="email" 
                   placeholder="your.email@example.com" 
-                  className="input input-bordered w-full bg-base-100 text-base-content placeholder-base-content/50" 
-                  name="from_email" // Added for EmailJS
+                  className="input input-bordered input-sm md:input-md w-full bg-base-100 text-base-content placeholder-base-content/50" 
+                  name="from_email"
+                  required
                 />
               </div>
 
               <div className="form-control mb-3">
                 <label className="label py-1">
-                  <span className="label-text text-primary-content text-base">Message</span>
+                  <span className="label-text text-primary-content text-sm md:text-base">Message</span>
                 </label>
                 <textarea 
-                  className="textarea textarea-bordered h-28 w-full bg-base-100 text-base-content placeholder-base-content/50" 
+                  className="textarea textarea-bordered textarea-sm md:textarea-md h-24 md:h-28 w-full bg-base-100 text-base-content placeholder-base-content/50 resize-none" 
                   placeholder="Your message..."
-                  name="message" // Added for EmailJS
+                  name="message"
+                  required
                 ></textarea>
               </div>
 
-              <div className="form-control mt-4">
-                <button type="submit" className="btn btn-accent">
+              <div className="form-control mt-3 md:mt-4">
+                <button type="submit" className="btn btn-accent btn-sm md:btn-md w-full">
                   Send Message
                 </button>
               </div>
