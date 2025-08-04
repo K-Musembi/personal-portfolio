@@ -70,7 +70,7 @@ const SoftwareProjects = () => {
                 <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-2 md:mb-3 lg:mb-4 text-neutral-content-focus text-center">
                   {project.title}
                 </h3>
-                <p className="text-base-content/80 text-xs sm:text-sm md:text-base leading-relaxed mb-4">
+                <p className="text-base-content/80 text-sm md:text-base leading-relaxed mb-4">
                   {project.description}
                 </p>
                 <a href={project.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm md:btn-md mt-2 md:mt-6 self-center">View Project</a>
